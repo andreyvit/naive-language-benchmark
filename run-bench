@@ -1,0 +1,9 @@
+#! /bin/bash
+suffix=${3-$1}
+: >bench-$suffix.txt
+
+count=3
+for((i=1; i<=count; i++)); do
+  echo "$1 $2 ($i/$count)..."
+  (time $1 $2 >primes-$suffix.txt) >>bench-$suffix.txt 2>&1
+done

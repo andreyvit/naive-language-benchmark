@@ -1,0 +1,6 @@
+primes-*.txt
+bench-*.txt
+benchmark.txt
+*.class
+*.o
+primes-c
